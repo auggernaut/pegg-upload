@@ -1,0 +1,5 @@
+{
+    "blitline_appId": "BLITLINE_APPID",
+    "blitline_secret": "BLITLINE_CLIENTID",
+    "s3_bucket": "S3_BUCKET"
+}
