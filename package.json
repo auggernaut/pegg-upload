@@ -13,6 +13,9 @@
       "express",
       "http",
       "url",
-      "node-fs"
+      "node-fs",
+      "ejs",
+      "mime",
+      "crypto"
   ]
 }

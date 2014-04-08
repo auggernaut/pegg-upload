@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pegg - Upload</title>
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Pegg - Upload Server</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <h3>Send all the bits.</h3>
+
+            <p>This is a simple image upload server for Pegg.</p>
+
+            <div class="row">
+                <div class="large-4 medium-4 columns">
+                    <p><a href="http://www.auggernaut.com">Auggernaut</a><br/>The guy who hacked this together.
+                    </p>
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <p><a href="http://github.com/auggernaut/pegg-upload">Github</a><br/>Latest code,
+                        issue reports, feature requests and more... not yet.</p>
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <p><a href="https://docs.google.com/spreadsheet/ccc?key=0AvUgF0sYoWO7dHlVVzh1alhxOWFJV2lpRDUtRVg2OXc&usp=sharing">Keys</a><br/>The keys you'll need to run this in dev.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h5>Config:</h5>
+        <!-- Grid Example -->
+
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="callout panel">
+                    <p><strong>Blitline appId: </strong><%= config.blitline_appId %></p>
+                    <p><strong>S3 Bucket: </strong><%= config.s3_bucket %></p>
+                    <p><strong>aws_access_id: </strong><%= config.aws_access_id %></p>
+                    <p><strong>aws_secret_access_key: </strong><%= config.aws_secret_access_key %></p>
+                </div>
+            </div>
+        </div>
+
+
+        <hr/>
+
+        <h5>Run:</h5>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <input type="file" name="input_name" id="uploadImg" class="small button"/>
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <button id="btnUpload" class="btn">Upload to S3</button>
+                <p id="lblS3"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <button id="btnProcess" class="btn">Process</button>
+                <p id="lblProcess"></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+
+</body>
+</html>
+
+
