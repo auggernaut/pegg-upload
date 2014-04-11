@@ -1,5 +1,6 @@
 {
-    "blitline_appId": "BLITLINE_APPID",
-    "blitline_secret": "BLITLINE_CLIENTID",
-    "s3_bucket": "S3_BUCKET"
+    "blitline_appId": "APP_updaeID",
+    "s3_bucket": "S3",
+    "aws_access_id": "AWS_KEY",
+    "aws_secret_access_key": "AWS_SECRET"
 }
