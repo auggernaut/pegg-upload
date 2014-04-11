@@ -4,18 +4,19 @@
   "description": "Thin wrapper around the Blitline service.",
   "version": "2.0.0",
   "repository": {
-    "type" : "git",
+    "type": "git",
     "url": "https://github.com/auggernaut/blitline"
   },
-  "main" : "main",
+  "main": "main",
   "dependencies": [],
-  "devDependencies": [
-      "express",
-      "http",
-      "url",
-      "node-fs",
-      "ejs",
-      "mime",
-      "crypto"
-  ]
+  "devDependencies": {
+    "0": "express",
+    "1": "http",
+    "2": "url",
+    "3": "node-fs",
+    "4": "ejs",
+    "5": "mime",
+    "6": "crypto",
+    "express": "^4.0.0"
+  }
 }

@@ -33,13 +33,13 @@ app.listen(port, null, function (err) {
 });
 
 
-app.configure(function() {
+
     //app.use('/media', express.static(__dirname + '/media'));
-    app.use(express.bodyParser());
+    //app.use(express.bodyParser());
     app.use(express.static(__dirname + '/public'));
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
-});
+
 
 // Examples
 app.get('/', function(req, res) {
