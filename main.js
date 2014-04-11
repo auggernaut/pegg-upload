@@ -8,6 +8,7 @@ var fs = require('node-fs'),
   express = require('express'),
   mime = require("mime"),
   crypto = require("crypto"),
+  connect = require('connect'),
   app = express();
 
 
@@ -33,7 +34,7 @@ app.listen(port, null, function (err) {
 
 
 //app.use('/media', express.static(__dirname + '/media'));
-//app.use(express.bodyParser());
+app.use(connect.bodyParser());
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
