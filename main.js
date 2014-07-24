@@ -37,6 +37,14 @@ app.listen(port, null, function (err) {
   console.log('Pegg Uploader, at your service: http://localhost:' + port);
 });
 
+// Convenience for allowing CORS on routes
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 
 //app.use('/media', express.static(__dirname + '/media'));
 app.use(connect.bodyParser());
