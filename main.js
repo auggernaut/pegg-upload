@@ -47,7 +47,7 @@ app.set('views', __dirname + '/views');
 
 // Examples
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {});
 });
 
 app.get('/s3policy/:filename', function (req, res) {
