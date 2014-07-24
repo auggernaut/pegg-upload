@@ -15,7 +15,7 @@ $('#btnUpload').click(function(){
         dataType: "JSON",
         success: function (creds) {
 
-            var loc = "img/" + file.name;
+            var loc = "uploaded/" + file.name;
             var fd = new FormData();
             fd.append("key", loc);
             fd.append("AWSAccessKeyId", creds.s3Key);
@@ -36,7 +36,7 @@ $('#btnUpload').click(function(){
                 if (xhr.responseText) {
                     console.log(xhr.responseText);
                 } else {
-                    $('#lblS3').html("http://pegg.s3.amazonaws.com/img/" + file.name);
+                    $('#lblS3').html("http://pegg.s3.amazonaws.com/uploaded/" + file.name);
                     console.log("Success");
                 }
             };

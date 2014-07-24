@@ -77,7 +77,7 @@ app.post('/process', function (req, res) {
           "image_identifier": "pegg-upload",
           "s3_destination": {
             "bucket": config.s3_bucket,
-            "key": filename
+            "key": "processed/" + filename
           }
         }
       }
