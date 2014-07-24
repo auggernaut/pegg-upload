@@ -116,13 +116,13 @@ function createS3Creds(filename, cb) {
     ]
   };
 
-  console.log("Secret: " + config.aws_secret_access_key);
+  console.log("Secret: " + config.aws_secret);
 
   var bufPolicy = new Buffer(JSON.stringify(s3Policy)).toString('base64');
 
   s3Credentials = {
     s3PolicyBase64: bufPolicy,
-    s3Signature: crypto.createHmac("sha1", config.aws_secret_access_key).update(bufPolicy).digest("base64"),
+    s3Signature: crypto.createHmac("sha1", config.aws_secret).update(bufPolicy).digest("base64"),
     s3Key: config.aws_access_id,
     /*    s3Redirect: "http://localhost:8888/#reply",*/
     s3Policy: s3Policy,
