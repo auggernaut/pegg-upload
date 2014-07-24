@@ -11,11 +11,16 @@ var fs = require('node-fs'),
   connect = require('connect'),
   app = express();
 
+var configFile;
+if(process.env.NODE_ENV === 'production')
+  configFile = '/config.json.production';
+else
+  configFile = '/config.json';
 
 // Load config defaults from JSON file.
 // Environment variables override defaults.
 function loadConfig() {
-  var config = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf-8'));
+  var config = JSON.parse(fs.readFileSync(__dirname + configFile, 'utf-8'));
   for (var i in config) {
     config[i] = process.env[i.toUpperCase()] || config[i];
   }
